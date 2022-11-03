@@ -16,16 +16,24 @@
   </header>
   <body>
     <!-- weather dashboard with form inputs -->
+
+    <form method="GET" action="http://localhost/echo.py">
+      <dl>
+        <dt>Search for a Location</dt>
+        <dd><input type="text" name="location" /></dd>
+      </dl>
+      <input type="submit" name="Form" value="Search"
+    </form>
     <main class="main-container">
-      <div class="location-and-date">A) Location and Date</div>
+      <div class="location-and-date">Location and Date</div>
 
-      <div class="current-temperature">B) Current Temperature</div>
+      <div class="current-temperature">Current Temperature</div>
 
-      <div class="current-statistics">C) Current Statistics</div>
+      <div class="current-statistics">Current Statistics</div>
 
-      <div class="hourly-weather">D) Hourly Weather Update</div>
+      <div class="hourly-weather">Hourly Weather Update</div>
 
-      <div class="5-day-forcast">E) 5 Day Forcast</div>
+      <div class="five-day-forcast">5 Day Forcast</div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,8 +1,94 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
 header {
 
-text-align: center;
-font-size: xx-large;
-font-weight: bolder;
-background-color: rgb(130, 130, 229);
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-color: black;}
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: rgb(130, 130, 229);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+body {
+    margin: 12px;
+    font-size: 100%;
+    background-color: gray;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    height: 100px;
+    background: linear-gradient(to bottom, rgb(195, 198, 250) 0%, rgb(111, 117, 233) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media and (min-width: 1140px) {
+        .main-container {
+            width: 1120px;
+            margin: 16px auto;
+            font-size: 1.1em;
+        }
+    }
+}
+
+form {
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.location-and-date {
+    width: 100%;
+    border: 3px solid rgb(37, 37, 175);
+    box-sizing: content-box;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.current-temperature {
+    width: 100%;
+    border: 3px solid rgb(240, 110, 5);
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.current-statistics {
+    width: 100%;
+    border: 3px solid rgb(244, 200, 3);
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    @media and (min-width: 768px) {
+        .current-temperature,
+        .current-statistics width: 50%;
+    }
+}
+
+.hourly-weather {
+    width: 100%;
+    border: 3px solid rgb(4, 151, 141);
+    display: none;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    @media and (min-width: 768px) {
+        .hourly-weather {
+            display: block;
+        }
+    }
+}
+
+.five-day-forcast {
+    width: 100%;
+    border: solid rgb(244, 69, 99);
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
