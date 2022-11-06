@@ -46,23 +46,32 @@ form {
 }
 
 .location-and-date {
-    width: 100%;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     border: 3px solid rgb(37, 37, 175);
     box-sizing: content-box;
+    text-align: center;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .current-temperature {
-    width: 100%;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     border: 3px solid rgb(240, 110, 5);
+    text-align: center;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .current-statistics {
-    width: 100%;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     border: 3px solid rgb(244, 200, 3);
+    text-align: center;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -73,9 +82,12 @@ form {
 }
 
 .hourly-weather {
-    width: 100%;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     border: 3px solid rgb(4, 151, 141);
     display: none;
+    text-align: center;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -87,8 +99,11 @@ form {
 }
 
 .five-day-forcast {
-    width: 100%;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
     border: solid rgb(244, 69, 99);
+    text-align: center;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
