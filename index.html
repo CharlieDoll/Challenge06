@@ -17,21 +17,22 @@
   <body>
     <!-- weather dashboard with form inputs -->
 
-    <form method="GET" action="http://localhost/echo.py">
-      <dl>
-        <dt>Search for a Location</dt>
-        <dd><input type="text" name="location" /></dd>
-      </dl>
-      <input type="submit" name="Form" value="Search"
-    </form>
+    <dl>
+      <dt>Search for a Location</dt>
+      <dd><input type="text" name="location" id="input-city" /></dd>
+    </dl>
+    <button id="search-button">search</button>
+
     <main class="main-container">
       <div class="location-and-date">Location and Date</div>
 
-      <div class="current-temperature">Current Temperature</div>
+      <div class="temperature">Temperature</div>
 
-      <div class="current-statistics">Current Statistics</div>
+      <div class="humidity">Humidity</div>
 
-      <div class="hourly-weather">Hourly Weather Update</div>
+      <div class="rain">Rain</div>
+
+      <div class="wind">Wind</div>
 
       <div class="five-day-forcast">5 Day Forcast</div>
     </main>
