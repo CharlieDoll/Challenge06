@@ -26,88 +26,43 @@ body {
     background-attachment: fixed;
 }
 
-.main-container {
+* {
+    box-sizing: border-box;
+}
+
+
+main {
     display: flex;
+    Forces elements to the next line if they don't fit
+ flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+*/ .main-header {
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
     flex-wrap: wrap;
-
-    @media and (min-width: 1140px) {
-        .main-container {
-            width: 1120px;
-            margin: 16px auto;
-            font-size: 1.1em;
-        }
-    }
+    justify-content: space-between;
+    padding: 60px;
+    background: #13293d;
+    color: #fff;
 }
 
-form {
-    color: black;
-    font-weight: bold;
-    font-size: medium;
-}
-
-.location-and-date {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 200px 200px;
-    width: 200px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 3px solid rgb(37, 37, 175);
-    box-sizing: content-box;
+.card {
+    flex: 1 0 0;
+    padding: 10px;
     text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.temperature {
-    width: 200px;
-    margin: 40px auto;
+.card header {
     padding: 20px;
-    border: 3px solid rgb(240, 110, 5);
-    text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: #13293d;
+    color: #fff;
 }
 
-.humidity {
+.card img {
     width: 200px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 3px solid rgb(244, 200, 3);
-    text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.rain {
-    width: 200px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 3px solid rgb(4, 151, 141);
-    display: none;
-    text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.wind {
-    width: 200px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 3px solid rgb(4, 151, 141);
-    display: none;
-    text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.five-day-forcast {
-    width: 200px;
-    margin: 40px auto;
-    padding: 20px;
-    border: solid rgb(244, 69, 99);
-    text-align: center;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    min-width: 200px;
 }
