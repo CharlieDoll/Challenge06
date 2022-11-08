@@ -55,13 +55,19 @@ fetch(fiveDaysUrl)
   {
   console.log(weatherList[i]);
 
-  const mainWeatherElement = document.createElement("h2")
-  const weatherDescriptionElement = document.createElement("p")
+  const mainWeatherElement = document.createElement("h2");
+  const weatherDescriptionElement = document.createElement("p");
+  const displayRainEle = document.createElement("rain");
+  const displayWindEl = document.createElement("wind");
+  const displayTempEl = document.createElement("temperature");
+  const displayHumidityEl = document.createElement("humidity");
+  const displayFiveDaysEl = document.createElement("FiveDays");
+
 
   mainWeatherElement.textcontent = weatherList[i].weather[0].mainWeatherElement
   weatherDescriptionElement.textContent = weatherList[i].weather[0].description 
 
-  weatherDisplayCard[i].append(mainWeatherElement,weatherDescriptionElement)
+  weatherDisplaycard[i].append(mainWeatherElement, weatherDescriptionElement, displayWindEl, displayRainEle, displayTempEl, displayHumidityEl, displayFiveDaysEl)
 
 j++
   }
