@@ -37,38 +37,37 @@ function fiveDaysRequest(lat, lon) {
     .then(function (fivedays) {
       console.log(fivedays);
     });
+  const weatherList = fivedays.list;
+  const weatherDisplaycard = document.querySelectorAll(".card");
+  let j = 0;
+  for (let i = 0; (i = weatherList.length); i += 8) {
+    console.log(weatherList[i]);
+
+    const mainWeatherElement = document.createElement("h2");
+    const weatherDescriptionElement = document.createElement("p");
+    const displayRainEle = document.createElement("rain");
+    const displayWindEl = document.createElement("wind");
+    const displayTempEl = document.createElement("temperature");
+    const displayHumidityEl = document.createElement("humidity");
+    const displayFiveDaysEl = document.createElement("fiveDayForcast");
+
+    mainWeatherElement.textcontent =
+      weatherList[i].weather[0].mainWeatherElement;
+    weatherDescriptionElement.textContent =
+      weatherList[i].weather[0].description;
+
+    weatherDisplaycard[i].append(
+      mainWeatherElement,
+      weatherDescriptionElement,
+      displayWindEl,
+      displayRainEle,
+      displayTempEl,
+      displayHumidityEl,
+      displayFiveDaysEl
+    );
+
+    j++;
+  }
 }
 
 searchButton.addEventListener("click", getApi);
-
-fetch(fiveDaysUrl)
-.then(function (res) {
-  return res.json();
-})
-.then(function (fivedays) {
-  console.log(fivedays);
-
-  const weatherList = fivedays.list 
-  const weatherDisplaycard = document.querySelectorAll('.card')
-  let j = 0
-  for (let i = 0; i = < weatherList.length; i+=8)
-  {
-  console.log(weatherList[i]);
-
-  const mainWeatherElement = document.createElement("h2");
-  const weatherDescriptionElement = document.createElement("p");
-  const displayRainEle = document.createElement("rain");
-  const displayWindEl = document.createElement("wind");
-  const displayTempEl = document.createElement("temperature");
-  const displayHumidityEl = document.createElement("humidity");
-  const displayFiveDaysEl = document.createElement("FiveDays");
-
-
-  mainWeatherElement.textcontent = weatherList[i].weather[0].mainWeatherElement
-  weatherDescriptionElement.textContent = weatherList[i].weather[0].description 
-
-  weatherDisplaycard[i].append(mainWeatherElement, weatherDescriptionElement, displayWindEl, displayRainEle, displayTempEl, displayHumidityEl, displayFiveDaysEl)
-
-j++
-  }
-})
