@@ -34,40 +34,44 @@ function fiveDaysRequest(lat, lon) {
     .then(function (res) {
       return res.json();
     })
-    .then(function (fivedays) {
-      console.log(fivedays);
+    .then(function (fiveDaysUrl) {
+      console.log("testing second call", fiveDaysUrl);
+      const weatherList = fiveDaysUrl.list;
+      const weatherDisplaycard = document.querySelectorAll(".card");
+      let j = 0;
+      for (let i = 0; i < weatherList.length; i += 8) {
+        console.log(weatherDisplaycard[j]);
+        console.log("index of j", j);
+
+        const mainWeatherElement = document.createElement("h2");
+        const weatherDescriptionElement = document.createElement("p");
+        const displayWindEl = document.createElement("div");
+        const displayTempEl = document.createElement("div");
+        const displayHumidityEl = document.createElement("div");
+        const displayFiveDaysEl = document.createElement("div");
+
+        mainWeatherElement.textcontent =
+          weatherList[i].weather[0].mainWeatherElement;
+        weatherDescriptionElement.textContent =
+          weatherList[i].weather[0].description;
+
+        displayHumidityEl.innerHTML = weatherList[i].main.humidity;
+        displayWindEl.innerHTML = weatherList[i].main.wind;
+        displayTempEl.innerHTML = weatherList[i].main.temp;
+        displayFiveDaysEl.innerHTML = weatherList[i].main.FiveDays;
+
+        weatherDisplaycard[j].append(
+          mainWeatherElement,
+          weatherDescriptionElement,
+          displayWindEl,
+          displayTempEl,
+          displayHumidityEl,
+          displayFiveDaysEl
+        );
+
+        j++;
+      }
     });
-  const weatherList = fivedays.list;
-  const weatherDisplaycard = document.querySelectorAll(".card");
-  let j = 0;
-  for (let i = 0; (i = weatherList.length); i += 8) {
-    console.log(weatherList[i]);
-
-    const mainWeatherElement = document.createElement("h2");
-    const weatherDescriptionElement = document.createElement("p");
-    const displayRainEle = document.createElement("rain");
-    const displayWindEl = document.createElement("wind");
-    const displayTempEl = document.createElement("temperature");
-    const displayHumidityEl = document.createElement("humidity");
-    const displayFiveDaysEl = document.createElement("fiveDayForcast");
-
-    mainWeatherElement.textcontent =
-      weatherList[i].weather[0].mainWeatherElement;
-    weatherDescriptionElement.textContent =
-      weatherList[i].weather[0].description;
-
-    weatherDisplaycard[i].append(
-      mainWeatherElement,
-      weatherDescriptionElement,
-      displayWindEl,
-      displayRainEle,
-      displayTempEl,
-      displayHumidityEl,
-      displayFiveDaysEl
-    );
-
-    j++;
-  }
 }
 
 searchButton.addEventListener("click", getApi);

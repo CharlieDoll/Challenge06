@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="/style.css" />
     <title>Weather Forcast</title>
   </head>
-  <header class="p-5 mb-4 border-5 border-bottom border-dark text-center">
-    <h1 class="display-3">Weather Forcast</h1>
-    <p class="lead">5 Day Weather Forcast</p>
-    <p id="currentDay" class="lead"></p>
-    <img src="chance-of-storm-128 copy.jpg" alt="Weather-Forcast" />
-    <img display="left" />
-  </header>
   <body>
+    <header
+      class="d-flex justify-content-around align-items-center p-5 mb-4 border-5 border-bottom border-dark"
+    >
+      <img src="chance-of-storm-128 copy.jpg" alt="Weather-Forcast" />
+      <div class="w-50">
+        <h1 class="display-3">Weather Forcast</h1>
+        <p class="lead">5 Day Weather Forcast</p>
+        <p id="currentDay" class="lead"></p>
+      </div>
+    </header>
     <!-- weather dashboard with form inputs -->
 
     <dl>
@@ -26,32 +33,42 @@
     <main>
       <section class="card">
         <header>Location-and-Date</header>
-        <img src="map-marker-128.jpg" alt="Location-and-Date" />
+        <!-- <img src="map-marker-128.jpg" alt="Location-and-Date" /> -->
       </section>
       <section class="card">
         <header>Temperature</header>
-        <img src="temperature-2-128.jpg" alt="Temperature" />
+        <!-- <img src="temperature-2-128.jpg" alt="Temperature" /> -->
       </section>
       <section class="card">
         <header>Humidity</header>
-        <img src="chance-of-storm-128.jpg" alt="Humidity" />
+        <!-- <img src="chance-of-storm-128.jpg" alt="Humidity" /> -->
       </section>
       <section class="card">
         <header>Rain</header>
-        <img src="rain-128 (1).jpg" alt="Rain" />
+        <!-- <img src="rain-128 (1).jpg" alt="Rain" /> -->
       </section>
       <section class="card">
         <header>Wind</header>
-        <img src="wind-turbine-128.jpg" alt="Wind" />
+        <!-- <img src="wind-turbine-128.jpg" alt="Wind" /> -->
       </section>
       <section class="card">
         <header>5-Day-Forcast</header>
-        <img src="partly-cloudy-day-128 copy.jpg" alt="5-Day-Forcast" />
+        <!-- <img src="partly-cloudy-day-128 copy.jpg" alt="5-Day-Forcast" /> -->
       </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>
