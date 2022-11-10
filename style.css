@@ -63,11 +63,13 @@ main {
     text-align: center;
     border-style: solid;
     border-width: 1px;
+    color: #13293d;
+    font-weight: bold;
 }
 
 .card header {
     padding: 20px;
-    background: #13293d;
+    background: #036b79;
     color: #fff;
 }
 

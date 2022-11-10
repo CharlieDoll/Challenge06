@@ -45,6 +45,7 @@ function fiveDaysRequest(lat, lon) {
 
         const mainWeatherElement = document.createElement("h2");
         const weatherDescriptionElement = document.createElement("p");
+        const displayCityEl = document.createElement("div");
         const displayWindEl = document.createElement("div");
         const displayTempEl = document.createElement("div");
         const displayHumidityEl = document.createElement("div");
@@ -55,6 +56,7 @@ function fiveDaysRequest(lat, lon) {
         weatherDescriptionElement.textContent =
           weatherList[i].weather[0].description;
 
+        displayCityEl.innerHTML = weatherList[i].main.city;
         displayHumidityEl.innerHTML = weatherList[i].main.humidity;
         displayWindEl.innerHTML = weatherList[i].main.wind;
         displayTempEl.innerHTML = weatherList[i].main.temp;
@@ -63,6 +65,7 @@ function fiveDaysRequest(lat, lon) {
         weatherDisplaycard[j].append(
           mainWeatherElement,
           weatherDescriptionElement,
+          displayCityEl,
           displayWindEl,
           displayTempEl,
           displayHumidityEl,
