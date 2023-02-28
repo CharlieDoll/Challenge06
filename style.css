@@ -37,6 +37,17 @@ body {
     background-attachment: fixed;
 }
 
+.container {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: #13293d
+}
+
 * {
     box-sizing: border-box;
 }
