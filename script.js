@@ -10,7 +10,7 @@ function getApi() {
   allSearch.push(cityName);
   localStorage.setItem("searchHistory", JSON.stringify(allSearch));
   var requestUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
     "&APPID=76119befad1d3879033ce0396274f555";
 
